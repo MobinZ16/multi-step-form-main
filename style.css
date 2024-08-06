@@ -1,4 +1,31 @@
 body{
     font-family: 'Ubuntu Mono', monospace;
     font-weight: 400;
+    background-color: hsl(231, 11%, 63%);
 }
+
+.container{
+    background-color: hsl(229, 24%, 87%);
+    display: flex;
+    justify-content: center;
+    padding: 1em;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.sub{
+    text-align: left;
+    background-image: url("assets/images/bg-sidebar-desktop.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 10px;
+    background-size: cover;
+    width: 500px;
+    height: 500px;
+    margin: auto;
+}
+
+.sub ol{
+    
+}
+
