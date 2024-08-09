@@ -6,7 +6,7 @@
 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
   <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="https://fonts.google.com/specimen/Ubuntu">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap">
   
   <title>Frontend Mentor | Multi-step form</title>
 
@@ -20,18 +20,18 @@
   <div class="container">
     <!-- Sidebar start -->
     <div class="sub">
-      <ol>
+      <ol class="custom">
        <li> Step 1
-         <h2>Your info</h2></li>
+         <p>Your info</p></li>
 
        <li> Step 2
-         <h2>Select plan</h2></li>
+         <p>Select plan</p></li>
 
        <li> Step 3
-         <h2>Add-ons</h2></li>
+         <p>Add-ons</p></li>
 
        <li> Step 4
-         <h2>Summary</h2></li>
+         <p>Summary</p></li>
       </ol>
 
     </div>
@@ -42,23 +42,27 @@
       Personal info
       Please provide your name, email address, and phone number.
 
-      Name
-      e.g. Stephen King
+      <form>
+        Name
+        <label>
+          <input type="text" id="name" placeholder="e.g. Stephen King" required>
+        Email Address
+        <input type="email" id="email" placeholder="e.g. stephenking@lorem.com" required>
 
-      Email Address
-      e.g. stephenking@lorem.com
-
-      Phone Number
-      e.g. +1 234 567 890
+        Phone Number
+        <input type="tel" id="phoneNumber" placeholder="e.g. +1 234 567 890" required>
+          <button type="submit" id="myButton">Next Step</button>
+        </label>
+      </form>
     </div>
-      Next Step
 
     <!-- Step 1 end -->
   </div>
 
-  <div class="attribution">
+ <!-- <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Your Name Here</a>.
   </div>
+  -->
 </body>
 </html>

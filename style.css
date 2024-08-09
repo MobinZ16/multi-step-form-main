@@ -1,7 +1,8 @@
 body{
-    font-family: 'Ubuntu Mono', monospace;
+    font-family: 'Roboto', sans-serif;
     font-weight: 400;
     background-color: hsl(231, 11%, 63%);
+    display: flex;
 }
 
 .container{
@@ -11,6 +12,8 @@ body{
     padding: 1em;
     border-radius: 10px;
     overflow: hidden;
+    color: hsl(231, 11%, 63%);
+    width: 80%;
 }
 
 .sub{
@@ -25,7 +28,51 @@ body{
     margin: auto;
 }
 
-.sub ol{
-    
+.container p{
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
 }
+
+.custom{
+    counter-reset: list-counter;
+    list-style: none;
+    padding-left: 0;
+}
+
+.custom li{
+    counter-increment: list-counter;
+    position: relative;
+    margin-bottom: 1rem;
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+}
+
+.custom li::before{
+    content: counter(list-counter);
+    position: absolute;
+    top: 0;
+    left: 0.5em;
+    width: 1.7rem;
+    height: 2rem;
+    border-radius: 50%;
+    border-style: solid;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+.custom li:hover::before{
+    color: hsl(206, 94%, 87%);
+}
+
+.custom li:hover:nth-last-child(ol){
+    color: hsl(206, 94%, 87%);
+}
+
+
+
 
