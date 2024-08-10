@@ -6,7 +6,8 @@
 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
   <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap">
+  <script src="script.js"></script>
   
   <title>Frontend Mentor | Multi-step form</title>
 
@@ -24,14 +25,11 @@
        <li> Step 1
          <p>Your info</p></li>
 
-       <li> Step 2
-         <p>Select plan</p></li>
+       <li> step 2<p>Select plan</p></li>
 
-       <li> Step 3
-         <p>Add-ons</p></li>
+       <li> Step 3<p>Add-ons</p></li>
 
-       <li> Step 4
-         <p>Summary</p></li>
+       <li> Step 4<p>Summary</p></li>
       </ol>
 
     </div>
@@ -39,20 +37,26 @@
 
     <!-- Step 1 start -->
     <div class="subspace">
-      Personal info
-      Please provide your name, email address, and phone number.
+      <h2>Personal info</h2>
+      <p>Please provide your name, email address, and phone number.</p>
 
       <form>
-        Name
-        <label>
-          <input type="text" id="name" placeholder="e.g. Stephen King" required>
-        Email Address
-        <input type="email" id="email" placeholder="e.g. stephenking@lorem.com" required>
-
-        Phone Number
-        <input type="tel" id="phoneNumber" placeholder="e.g. +1 234 567 890" required>
-          <button type="submit" id="myButton">Next Step</button>
-        </label>
+        <div id="nameGroup">
+          <label for="name">Name</label>
+            <input type="text" id="name" name="name" placeholder="e.g. Stephen King" required>
+          <span class="error-massage">this field is required</span>
+        </div>
+        <div id="emailGroup">
+          <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" placeholder="e.g. stephenking@lorem.com" required>
+          <span class="error-massage">this field is required</span>
+        </div>
+        <div id="phoneNumberGroup">
+          <label for="phoneNumber">Phone Number</label>
+            <input type="tel" id="phoneNumber" name="phoneNumber" placeholder="e.g. +1 234 567 890" required>
+          <span class="error-massage">this field is required</span>
+        </div>
+        <button type="submit" id="myButton">Next Step</button>
       </form>
     </div>
 
