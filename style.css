@@ -2,7 +2,7 @@ body{
     font-family: 'Ubuntu', sans-serif;
     font-weight: 400;
     background-color: hsl(231, 11%, 63%);
-    display: flex;
+    min-height: 100vh;
 }
 
 .container{
@@ -75,6 +75,10 @@ body{
     margin: 20px 0;
     padding-left: 20px;
     padding-right: 20px;
+    text-align: right;
+}
+
+.subspace h2{
     text-align: left;
 }
 
@@ -86,6 +90,7 @@ label{
     display: block;
     margin-bottom: 10px;
     font-weight: bold;
+    text-align: left;
 }
 
 input[type="text"],
@@ -95,18 +100,41 @@ input[type="tel"]{
     padding: 10px;
     font-size: 16px;
     border: 2px solid #ced4da;
+    margin-bottom: 10px;
     border-radius: 10px;
     box-sizing: border-box;
     transition: border-bottom-color 0.3s;
+    text-align: left;
+    outline: none;
 }
 
-.error-massage{
-    color: red;
+button {
+    color: white;
+    background-color: hsl(213, 96%, 18%);
+    border-radius: 10px;
+    font-weight: bold;
+    display: inline-block;
+    margin: 5px;
+    padding: 15px;
+    width: 110px;
+    font-size: 1rem;
+
+}
+
+.error{
+    border-color: #dc3545;
+}
+
+.error-message {
+    color: #dc3545;
     font-size: 14px;
     margin-top: 5px;
-    display: block;
-    text-align: right;
+    display: none;
 }
+
+
+
+
 
 
 

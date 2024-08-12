@@ -7,8 +7,7 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap">
-  <script src="script.js"></script>
-  
+
   <title>Frontend Mentor | Multi-step form</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
@@ -40,23 +39,23 @@
       <h2>Personal info</h2>
       <p>Please provide your name, email address, and phone number.</p>
 
-      <form>
-        <div id="nameGroup">
+      <form id="form">
+        <div class="from-group" id="nameGroup">
           <label for="name">Name</label>
             <input type="text" id="name" name="name" placeholder="e.g. Stephen King" required>
           <span class="error-massage">this field is required</span>
         </div>
-        <div id="emailGroup">
+        <div class="from-group" id="emailGroup">
           <label for="email">Email Address</label>
             <input type="email" id="email" name="email" placeholder="e.g. stephenking@lorem.com" required>
           <span class="error-massage">this field is required</span>
         </div>
-        <div id="phoneNumberGroup">
+        <div class="from-group" id="phoneNumberGroup">
           <label for="phoneNumber">Phone Number</label>
             <input type="tel" id="phoneNumber" name="phoneNumber" placeholder="e.g. +1 234 567 890" required>
           <span class="error-massage">this field is required</span>
         </div>
-        <button type="submit" id="myButton">Next Step</button>
+        <button type="submit" class="submitButton">Next Step</button>
       </form>
     </div>
 
@@ -64,9 +63,10 @@
   </div>
 
  <!-- <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
     Coded by <a href="#">Your Name Here</a>.
   </div>
   -->
+  <script src="script.js"></script>
 </body>
 </html>
