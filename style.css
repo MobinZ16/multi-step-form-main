@@ -2,18 +2,18 @@ body{
     font-family: 'Ubuntu', sans-serif;
     font-weight: 400;
     background-color: hsl(231, 11%, 63%);
-    min-height: 100vh;
+    padding: 6em;
+    margin: auto;
 }
 
 .container{
     background-color: hsl(229, 24%, 87%);
     display: flex;
-    justify-content: center;
     padding: 1em;
+    margin-bottom: auto;
     border-radius: 10px;
-    overflow: hidden;
     color: hsl(231, 11%, 63%);
-    width: 80%;
+    width: 60em;
 }
 
 .sub{
@@ -23,7 +23,7 @@ body{
     background-position: center;
     border-radius: 10px;
     background-size: cover;
-    width: 500px;
+    width: 300px;
     height: 500px;
     margin: auto;
 }
@@ -32,6 +32,7 @@ body{
     color: white;
     font-weight: bold;
     font-size: 20px;
+    text-align: left;
 }
 
 .custom{

@@ -1,42 +1,33 @@
-document.getElementById("form").addEventListener("submit", function(event) {
-    event.preventDefault();
+const form = document.getElementById('form');
+const name = document.getElementById('name');
+const email = document.getElementById('email');
+const phone = document.getElementById('phoneNumber');
 
-    // Clear previous error messages
-    document.getElementById("emailError").textContent = "";
-    document.getElementById("phoneError").textContent = "";
+form.addEventListener('submit', (e) => {
 
-    // Get form values
-    const email = document.getElementById("email").value;
-    const phone = document.getElementById("phone").value;
+    e.preventDefault();
 
-    let valid = true;
-
-    // Email validation
-    if (!validateEmail(email)) {
-        valid = false;
-        document.getElementById("emailError").textContent = "Please enter a valid email address.";
-        document.getElementById("email").classList.add("error");
-    } else {
-        document.getElementById("email").classList.remove("error");
-    }
-
-    // Phone number validation
-    if (phone === "") {
-        valid = false;
-        document.getElementById("phoneError").textContent = "This field is required";
-        document.getElementById("phone").classList.add("error");
-    } else {
-        document.getElementById("phone").classList.remove("error");
-    }
-
-    // If valid, navigate to step2.html
-    if (valid) {
-        window.location.href = "step2.html";
-    }
+    validateInputs();
 });
 
-// Function to validate email format
-function validateEmail(email) {
-    const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    return re.test(email);
-}
+const setError = (element, massage) => {
+    const inputControl = element.parentElement;
+    const errorDisplay = inputControl.querySelector('.error');
+
+    errorDisplay.innerText = massage;
+    inputControl.classList.add('error');
+};
+
+const validateInputs = () => {
+    const nameValue = name.value.trim();
+    const emailValue = email.value.trim();
+    const phoneValue = phone.value.trim();
+
+    if (nameValue === '' || emailValue === '' || phoneValue === '') {
+        setError('this field is required');
+    }else {
+        document.getElementById('submit').onclick = function (){
+            window.location.href = 'step2.html';
+        }
+    }
+};
