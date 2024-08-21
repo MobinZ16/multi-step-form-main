@@ -2,45 +2,87 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Frontend Mentor | Multi-step form</title>
+    <title>Select your plan</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap">
+    <style>
+        .active .step-number {
+            background-color: #cbd5e1; /* Light blue background for active step */
+            color: #4f46e5; /* Purple text for active step number */
+            border-color: #cbd5e1;
+        }
+
+        .active .step-info {
+            color: white;
+        }
+    </style>
 </head>
 <body>
-<!-- Sidebar start -->
-<div class="sub">
-    Step 1
-    Your info
+    <div class="container">
+     <!-- Sidebar start -->
+        <div class="sub">
+        <ol>
+            <li class="step">
+                <div class="step-number">1</div>
+                <div class="step-description">
+                    <span class="step-title">Step 1</span>
+                    <span class="step-info">Your Info</span>
+                </div>
+            </li>
+            <li class="step active">
+                <div class="step-number">2</div>
+                <div class="step-description">
+                    <span class="step-title">Step 2</span>
+                    <span class="step-info">Select Plan</span>
+                </div>
+            </li>
+            <li class="step">
+                <div class="step-number">3</div>
+                <div class="step-description">
+                    <span class="step-title">Step 3</span>
+                    <span class="step-info">Add-ons</span>
+                </div>
+            </li>
+            <li class="step">
+                <div class="step-number">4</div>
+                <div class="step-description">
+                    <span class="step-title">Step 4</span>
+                    <span class="step-info">Summary</span>
+                </div>
+            </li>
+        </ol>
 
-    Step 2
-    Select plan
+        </div>
+        <!-- Sidebar end -->
 
-    Step 3
-    Add-ons
+        <!-- Step 2 start -->
+        <div class="subspace">
+            <h2>Select your plan</h2>
+            <p>You have the option of monthly or yearly billing.</p>
 
-    Step 4
-    Summary
-</div>
-<!-- Sidebar end -->
-<!-- Step 2 start -->
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40"><g fill="none" fill-rule="evenodd"><circle cx="20" cy="20" r="20" fill="#FFAF7E"/><path fill="#FFF" fill-rule="nonzero" d="M24.995 18.005h-3.998v5.998h-2v-5.998H15a1 1 0 0 0-1 1V29a1 1 0 0 0 1 1h9.995a1 1 0 0 0 1-1v-9.995a1 1 0 0 0-1-1Zm-5.997 8.996h-2v-1.999h2v2Zm2-11.175a2.999 2.999 0 1 0-2 0v2.18h2v-2.18Z"/></g></svg>
+                Arcade
+                $9/mo</div>
 
-Select your plan
-You have the option of monthly or yearly billing.
+            <div>Advanced
+                $12/mo</div>
 
-Arcade
-$9/mo
+            <div>Pro
+                $15/mo</div>
 
-Advanced
-$12/mo
+            <div>Monthly
+            Yearly</div>
 
-Pro
-$15/mo
+            <div class="button">
+                <button id="back">Go Back</button>
+                <button type="submit" id="submit">Next Step</button>
+            </div>
+        <script src="script.js"></script>
 
-Monthly
-Yearly
-
-Go Back
-Next Step
-
-<!-- Step 2 end -->
-
+        <!-- Step 2 end -->
+        </div>
+    </div>
 </body>
 </html>

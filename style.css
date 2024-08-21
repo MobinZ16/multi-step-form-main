@@ -1,19 +1,21 @@
 body{
     font-family: 'Ubuntu', sans-serif;
-    font-weight: 400;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
     background-color: hsl(231, 11%, 63%);
     padding: 6em;
-    margin: auto;
 }
 
 .container{
     background-color: hsl(229, 24%, 87%);
     display: flex;
     padding: 1em;
-    margin-bottom: auto;
     border-radius: 10px;
     color: hsl(231, 11%, 63%);
-    width: 60em;
+    width: 51em;
 }
 
 .sub{
@@ -23,9 +25,9 @@ body{
     background-position: center;
     border-radius: 10px;
     background-size: cover;
-    width: 300px;
+    width: 250px;
     height: 500px;
-    margin: auto;
+    padding: 20px;
 }
 
 .container p{
@@ -35,37 +37,52 @@ body{
     text-align: left;
 }
 
-.custom{
-    counter-reset: list-counter;
-    list-style: none;
-    padding-left: 0;
+ol{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
 }
 
-.custom li{
-    counter-increment: list-counter;
-    position: relative;
-    margin-bottom: 1rem;
-    padding-left: 2.5rem;
-    padding-right: 2.5rem;
-    display: flow;
-}
-
-.custom li::before{
-    content: counter(list-counter);
-    position: absolute;
-    top: 0;
-    left: 0.5em;
-    width: 1.7rem;
-    height: 2rem;
-    border-radius: 50%;
-    border-style: solid;
+li{
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
     color: white;
+}
+
+li:last-child{
+    margin-bottom: 0;
+}
+
+.step-number{
+    width: 30px;
+    height: 30px;
+    border: 2px solid white;
+    border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
     font-weight: bold;
-    font-size: 1rem;
+    margin-right: 10px;
 }
+
+.step-description {
+    display: flex;
+    flex-direction: column;
+}
+
+.step-title {
+    font-size: 12px;
+    text-transform: uppercase;
+    opacity: 0.7;
+}
+
+.step-info {
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
 
 .custom li:hover::before{
     color: hsl(206, 94%, 87%);
@@ -74,9 +91,16 @@ body{
 .subspace{
     color: hsl(213, 96%, 18%);
     margin: 20px 0;
-    padding-left: 20px;
+    padding-left: 100px;
     padding-right: 20px;
     text-align: right;
+    justify-content: space-between;
+    flex-direction: column;
+    display: flex;
+}
+
+.HP{
+    display: inline-block;
 }
 
 .subspace h2{
@@ -114,12 +138,13 @@ button {
     background-color: hsl(213, 96%, 18%);
     border-radius: 10px;
     font-weight: bold;
-    display: inline-block;
+    display: flex;
+    justify-content: flex-end;
     margin: 5px;
     padding: 15px;
     width: 110px;
     font-size: 1rem;
-
+    float: right;
 }
 
 .error{
@@ -132,6 +157,16 @@ button {
     margin-top: 5px;
     display: none;
 }
+
+.button #submit{
+    float: right;
+}
+
+.button #back{
+    float: left;
+}
+
+
 
 
 
