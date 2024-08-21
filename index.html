@@ -15,20 +15,51 @@
     .attribution { font-size: 11px; text-align: center; }
     .attribution a { color: hsl(228, 45%, 44%); }
   </style>
+  <style>
+    .active .step-number {
+      background-color: #cbd5e1; /* Light blue background for active step */
+      color: #4f46e5; /* Purple text for active step number */
+      border-color: #cbd5e1;
+    }
+
+    .active .step-info {
+      color: white;
+    }
+  </style>
 </head>
 <body>
   <div class="container">
     <!-- Sidebar start -->
     <div class="sub">
-      <ol class="custom">
-       <li> Step 1
-         <p>Your info</p></li>
-
-       <li> step 2<p>Select plan</p></li>
-
-       <li> Step 3<p>Add-ons</p></li>
-
-       <li> Step 4<p>Summary</p></li>
+      <ol>
+        <li class="step active">
+          <div class="step-number">1</div>
+          <div class="step-description">
+            <span class="step-title">Step 1</span>
+            <span class="step-info">Your Info</span>
+          </div>
+        </li>
+        <li class="step">
+          <div class="step-number">2</div>
+          <div class="step-description">
+            <span class="step-title">Step 2</span>
+            <span class="step-info">Select Plan</span>
+          </div>
+        </li>
+        <li class="step">
+          <div class="step-number">3</div>
+          <div class="step-description">
+            <span class="step-title">Step 3</span>
+            <span class="step-info">Add-ons</span>
+          </div>
+        </li>
+        <li class="step">
+          <div class="step-number">4</div>
+          <div class="step-description">
+            <span class="step-title">Step 4</span>
+            <span class="step-info">Summary</span>
+          </div>
+        </li>
       </ol>
 
     </div>
@@ -53,7 +84,7 @@
         <div class="inputControl" id="phoneNumberGroup">
           <label for="phoneNumber">Phone Number</label>
             <input type="tel" id="phoneNumber" name="phoneNumber" placeholder="e.g. +1 234 567 890" >
-          <span class="error"></span>
+          <span class="error`"></span>
         </div>
         <button type="submit" id="submit">Next Step</button>
       </form>
