@@ -260,12 +260,52 @@ button {
     gap: 20px;
 }
 
-.plan:hover{
-    border-color: hsl(243, 100%, 62%);
-    transform: scale(1.05);
-}
-
 .card-title{
     font-weight: bold;
     color: hsl(213, 96%, 18%);
+    justify-content: end;
+
+}
+
+.cards{
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+}
+
+.cards .card{
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    border-radius: 10px;
+    color: #aaa;
+    cursor: pointer;
+    transition: 400ms;
+    border: 2px solid hsl(229, 24%, 87%);
+    width: 100px;
+    height: 200px;
+    padding: 20px;
+}
+
+
+.cards .card:hover{
+    transform: scale(1.2, 1.2);
+}
+
+.cards:hover > .card:not(:hover){
+    transform: scale(0.9, 0.9);
+    filter: blur(10px);
+}
+
+.cards input[type="checkbox"]{
+    display: none;
+}
+
+.cards input[type="checkbox"]:checked + .card{
+    border-color: #6366f1;
+    background-color: #e0e7ff;
+}
+
+.cards input[type="checkbox"]:checked + .card .card-title, .cards input[type="checkbox"]:checked + .card .price{
+    color: hsl(243, 100%, 62%);
 }
