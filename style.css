@@ -260,52 +260,96 @@ button {
     gap: 20px;
 }
 
-.card-title{
+.title{
     font-weight: bold;
     color: hsl(213, 96%, 18%);
-    justify-content: end;
+    
 
 }
 
-.cards{
+.wrapper{
+    position: relative;
     display: flex;
     flex-direction: row;
-    gap: 15px;
+    gap: 10px;
 }
 
-.cards .card{
-    display: flex;
-    flex-direction: column;
-    justify-content: end;
+.card{
+    position: relative;    
     border-radius: 10px;
     color: #aaa;
-    cursor: pointer;
-    transition: 400ms;
-    border: 2px solid hsl(229, 24%, 87%);
-    width: 100px;
+    transition: all 0.3s;
+    width: 150px;
     height: 200px;
+}
+
+.card .lable{
     padding: 20px;
+    top: 0;
 }
 
-
-.cards .card:hover{
-    transform: scale(1.2, 1.2);
+.card .lable .title{
+    margin-top: 70px;
 }
 
-.cards:hover > .card:not(:hover){
-    transform: scale(0.9, 0.9);
-    filter: blur(10px);
+.card:hover{
+    transform: scale(1.05);
 }
 
-.cards input[type="checkbox"]{
-    display: none;
+.input{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    cursor: pointer;
+    appearance: none;
+    border: 2px solid hsl(229, 24%, 87%);
+    border-radius: 10px;
+    z-index: 10;
+    box-shadow: 1px 1px 10px #aaaaaa,
+                -1px -1px 10px #ffffff;
 }
 
-.cards input[type="checkbox"]:checked + .card{
-    border-color: #6366f1;
-    background-color: #e0e7ff;
+.input + .check::before{
+    content: "";
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    height: 16px;
+    width: 16px;
+    border: 2px solid #d0d0d0;
+    border-radius: 50%;
+    background-color: #E8E8E8;
 }
 
-.cards input[type="checkbox"]:checked + .card .card-title, .cards input[type="checkbox"]:checked + .card .price{
-    color: hsl(243, 100%, 62%);
+.input:checked + .check::after{
+    content: '';
+    position: absolute;
+    top: 19px;
+    right: 19px;
+    width: 12px;
+    height: 12px;
+    background-color: hsl(243, 100%, 62%);
+    border-radius: 50%;
 }
+
+.input[value="Advanced"]:checked + .check::after{
+    background-color: hsl(243, 100%, 62%);
+}
+
+.input[value="Arcade"]:checked{
+    border: 1.5px solid hsl(243, 100%, 62%);
+}
+
+.input[value="Pro"]:checked + .check::after{
+    background-color: hsl(243, 100%, 62%);
+}
+
+.input[value="Advanced"]:checked{
+    border: 1.5px solid hsl(243, 100%, 62%);
+}
+
+.input[value="Pro"]:checked{
+    border: 1.5px solid hsl(243, 100%, 62%);
+}   
