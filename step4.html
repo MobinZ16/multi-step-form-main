@@ -3,36 +3,73 @@
 <head>
     <meta charset="UTF-8">
     <title>Frontend Mentor | Multi-step form</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap">
+    <style>
+        .active .step-number {
+            background-color: #cbd5e1; /* Light blue background for active step */
+            color: #4f46e5; /* Purple text for active step number */
+            border-color: #cbd5e1;
+        }
+
+        .active .step-info {
+            color: white;
+        }
+    </style>
 </head>
 <body>
-<!-- Sidebar start -->
-<div class="sub">
-    Step 1
-    Your info
+    <div class="container">    
+        <!-- Sidebar start -->
+        <div class="sub">
+            <ol>
+                <li class="step">
+                    <div class="step-number">1</div>
+                    <div class="step-description">
+                        <span class="step-title">Step 1</span>
+                        <span class="step-info">Your Info</span>
+                    </div>
+                </li>
+                <li class="step">
+                    <div class="step-number">2</div>
+                    <div class="step-description">
+                        <span class="step-title">Step 2</span>
+                        <span class="step-info">Select Plan</span>
+                    </div>
+                </li>
+                <li class="step">
+                    <div class="step-number">3</div>
+                    <div class="step-description">
+                        <span class="step-title">Step 3</span>
+                        <span class="step-info">Add-ons</span>
+                    </div>
+                </li>
+                <li class="step active">
+                    <div class="step-number">4</div>
+                    <div class="step-description">
+                        <span class="step-title">Step 4</span>
+                        <span class="step-info">Summary</span>
+                    </div>
+                </li>
+            </ol>
 
-    Step 2
-    Select plan
+        </div>
+            <!-- Sidebar end -->
 
-    Step 3
-    Add-ons
+            <!-- Step 4 start -->
+        <div class="subspace">
+            <div><h2>Finishing up</h2>
+            <p style="font-size: 15px">Double-check everything looks OK before confirming.</p></div>
 
-    Step 4
-    Summary
-</div>
-<!-- Sidebar end -->
-<!-- Step 4 start -->
+            <!-- Dynamically add subscription and add-on selections here -->
 
-Finishing up
-Double-check everything looks OK before confirming.
+            Total (per month/year)
 
-<!-- Dynamically add subscription and add-on selections here -->
+            Go Back
+            Confirm
 
-Total (per month/year)
-
-Go Back
-Confirm
-
-<!-- Step 4 end -->
-
+            <!-- Step 4 end -->
+        </div>
+   </div>
 </body>
 </html>
