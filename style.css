@@ -352,4 +352,74 @@ button {
 
 .input[value="Pro"]:checked{
     border: 1.5px solid hsl(243, 100%, 62%);
-}   
+}
+
+.add-ons{
+    border: 1.5px solid #d0d0d0;
+    border-radius: 10px;
+    padding: 8px;
+}
+
+.title3{
+    font-weight: bold;
+    font-size: 25px;
+    margin-bottom: 7px;
+}
+
+.description{
+    font-size: 15px;
+    color: hsl(231, 11%, 63%);
+    font-weight: bold;
+}
+
+.pm{
+    align-items: right;
+    color: hsl(243, 100%, 62%);
+}
+
+.add-ons{
+    width: 470px;
+}
+
+.choose + .check::before{
+    content: "";
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    height: 16px;
+    width: 16px;
+    border: 2px solid #d0d0d0;
+    border-radius: 50%;
+    background-color: #E8E8E8;
+}
+
+.choose:checked + .check::after{
+    content: '';
+    position: absolute;
+    top: 19px;
+    right: 19px;
+    width: 12px;
+    height: 12px;
+    background-color: hsl(243, 100%, 62%);
+    border-radius: 50%;
+}
+
+.choose[value="Online"]:checked + .check::after{
+    background-color: hsl(243, 100%, 62%);
+}
+
+.input[value="Larger"]:checked{
+    border: 1.5px solid hsl(243, 100%, 62%);
+}
+
+.input[value="Customizable"]:checked + .check::after{
+    background-color: hsl(243, 100%, 62%);
+}
+
+.input[value="Online"]:checked{
+    border: 1.5px solid hsl(243, 100%, 62%);
+}
+
+.input[value="Customizable"]:checked{
+    border: 1.5px solid hsl(243, 100%, 62%);
+}

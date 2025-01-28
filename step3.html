@@ -2,45 +2,97 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Frontend Mentor | Multi-step form</title>
+    <title>Frontend Mentor | Pick add-ons</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap">
+    <style>
+        .active .step-number {
+            background-color: #cbd5e1; /* Light blue background for active step */
+            color: #4f46e5; /* Purple text for active step number */
+            border-color: #cbd5e1;
+        }
+
+        .active .step-info {
+            color: white;
+        }
+    </style>
 </head>
 <body>
-<!-- Sidebar start -->
-<div class="sub">
-    Step 1
-    Your info
+    <div class="container">
+        <!-- Sidebar start -->
+           <div class="sub">
+            <ol>
+                <li class="step">
+                    <div class="step-number">1</div>
+                    <div class="step-description">
+                        <span class="step-title">Step 1</span>
+                        <span class="step-info">Your Info</span>
+                    </div>
+                </li>
+                <li class="step">
+                    <div class="step-number">2</div>
+                    <div class="step-description">
+                        <span class="step-title">Step 2</span>
+                        <span class="step-info">Select Plan</span>
+                    </div>
+                </li>
+                <li class="step active">
+                    <div class="step-number">3</div>
+                    <div class="step-description">
+                        <span class="step-title">Step 3</span>
+                        <span class="step-info">Add-ons</span>
+                    </div>
+                </li>
+                <li class="step">
+                    <div class="step-number">4</div>
+                    <div class="step-description">
+                        <span class="step-title">Step 4</span>
+                        <span class="step-info">Summary</span>
+                    </div>
+                </li>
+            </ol>
+    
+           </div>
+            <!-- Sidebar end -->
+            <!-- Step 3 start -->
 
-    Step 2
-    Select plan
+        <div class="subspace">
+            <div><h2>Pick add-ons</h2>
+            <p>Add-ons help enhance your gaming experience.</p></div>
 
-    Step 3
-    Add-ons
-
-    Step 4
-    Summary
-</div>
-<!-- Sidebar end -->
-<!-- Step 3 start -->
-
-Pick add-ons
-Add-ons help enhance your gaming experience.
-
-Online service
-Access to multiplayer games
-+$1/mo
-
-Larger storage
-Extra 1TB of cloud save
-+$2/mo
-
-Customizable Profile
-Custom theme on your profile
-+$2/mo
-
-Go Back
-Next Step
-
-<!-- Step 3 end -->
-
+            <div>
+                <div class="box">
+                    <label class="add-ons">
+                        <input type="checkbox" class="choose" name="add-ons" value="Online">
+                        <span class="check"></span>
+                        <div class="title3">Online service</div>
+                        <div class="description">Access to multiplayer games</div>
+                        <span class="pm">+$1/mo</span>
+                    </label>
+                    <label class="add-ons">
+                        <input type="checkbox" class="choose" name="add-ons" value="Larger">
+                        <span class="check"></span>
+                        <div class="title3">Larger storage</div>
+                        <div class="description">Extra 1TB of cloud save</div>
+                        <span class="pm">+$2/mo</span>
+                    </label>
+                    <label class="add-ons">
+                        <input type="checkbox" name="add-ons" class="choose" value="Customizable">
+                        <span class="check"></span>
+                        <div class="title3">Customizable Profile</div>
+                        <div class="description">Custom theme on your profile</div>
+                        <span class="pm">+$2/mo</span>
+                    </label>
+                </div>
+                <div>
+                    <button type="button" id="back" value="back" onclick="window.history.go(index.html)">Go Back</button>
+                    <button type="submit" id="submit">Next Step</button>
+                </div>
+            </div>    
+        </div>
+    </div>
+    <!-- Step 3 end -->
+    <script src="script.js"></script>
 </body>
 </html>
